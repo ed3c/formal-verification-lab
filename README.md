@@ -71,6 +71,8 @@ The runner uses its own `sys.executable`. It saves package versions, commands, l
 
 `PYTHONPATH=src python3 -m formal_verification_lab.blind_outcome --help` describes the closed eight-question format and neutral packet CLI. Schema validity does not score truth. The pure helpers in `blind_protocol.py` isolate profile data, provide task-local zsh overrides and prepare exact typed stdin. None starts a model or grants runtime effects.
 
+`PYTHONPATH=src python3 -m formal_verification_lab.retry_conformance --help` describes selected lifecycle, resume and explicit operation-state checks. Native requeue is a conditional action candidate; missing operation/effect facts stay UNKNOWN. See [retry mapping](docs/RETRY-CONFORMANCE.md).
+
 See the [verification protocol](docs/NATIVE-READBACK.md) and [reader handoff](docs/READER-HANDOFF.md). Public tests use synthetic data. Private experiment sources, independent answers, failures and costs stay outside Git.
 
 ## Claim boundary
