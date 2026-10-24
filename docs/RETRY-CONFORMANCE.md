@@ -45,3 +45,7 @@ Run `PYTHONPATH=src python3 -m formal_verification_lab.retry_conformance --help`
 Save the command, model/mapping source digests, input bytes/digests, actual stdout/stderr/exit and independent expected observations outside the public repository. Freeze expected observations before reading checker output. Keep earlier partial captures and failed checks; a later complete retained record is a new selected observation, not permission to rewrite an old UNKNOWN result.
 
 Run `PYTHONPATH=src python3 -m pytest -q` for public software controls. The controls and actual trace results answer different questions. Historical trace reuse starts no new Native worker, while replaying selected files is not a fresh runtime experiment. Missing operation reconciliation limits the corresponding model conclusion and does not block independent workflow/lineage inspection or Session engineering.
+
+## Complete a missing effect observation
+
+Use the [effect-retry evidence contract](EFFECT-RETRY-EVIDENCE.md) before selecting additional records. Identify the actual operation and effect domain; worker/order state does not supply it. Keep separate publication or landing cases separate. A bounded local search without a matching journal cannot reconstruct a lost historical observation. Existing partial evaluation remains available, and missing evidence limits only dependent findings.
