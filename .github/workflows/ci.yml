@@ -1,0 +1,19 @@
+name: Source-only verification
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  python-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -e '.[test,verify]'
+      - run: python -m pytest -q
+      - run: crosshair check src/formal_verification_lab/formal_contracts.py --per_condition_timeout 10
+      - run: python -m formal_verification_lab.cli controls fixtures/cases
+# Model checker is an explicit separate gate. Do not claim native/model verification from this workflow.

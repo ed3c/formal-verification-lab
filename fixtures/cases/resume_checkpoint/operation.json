@@ -1,0 +1,13 @@
+{
+  "action_seq": 10,
+  "checkpoint_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "from_state": "INTERRUPTED",
+  "head": "head-a",
+  "idempotency_key": "op-1",
+  "kind": "RESUME",
+  "operation_id": "op-1",
+  "reports_success": false,
+  "requests_effect": false,
+  "session_id": "session-1",
+  "to_state": "CLAIMED"
+}

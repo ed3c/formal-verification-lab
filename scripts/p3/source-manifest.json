@@ -1,0 +1,759 @@
+{
+  "repository": "ed3c/soodles",
+  "ref": "b58b14a021ed58c12fa374397aacba2e74e424bd",
+  "prefix": "source-escrow/formal-verification-lab/",
+  "files": [
+    {
+      "path": "docs/DECISIONS.md",
+      "git_blob_sha1": "9b1b06fd17f0c18edfd86b0884b05ed0e458f8b3"
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha1": "961c34caf534f76e2ed95cd6b2bc99e487dbf4a5"
+    },
+    {
+      "path": "AGENTS.md",
+      "git_blob_sha1": "5c34b9a3b3d81fdfe8ea52c80e9edaf7fb37e5a8"
+    },
+    {
+      "path": "docs/ACCEPTANCE.md",
+      "git_blob_sha1": "ffaf6b1b9db762136e4890039bcd0422eefb8518"
+    },
+    {
+      "path": ".gitignore",
+      "git_blob_sha1": "99272336845979497a92e1a1f13dbad21cda4d95"
+    },
+    {
+      "path": "docs/MODEL-EXPLORATION.md",
+      "git_blob_sha1": "a58921a630c7ed22c329fa1ef5e5c8302c41bede"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob_sha1": "70861c12d207d38835a4ab423ca297134971b28c"
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "git_blob_sha1": "acd46cfc8d36e461bc14dae767b5604e7b5eb9ca"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "git_blob_sha1": "560851acd6e5430eb2a6f00f20c4d8676221d1cd"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha1": "cfd03e20a93bf9e66dda6409d4abc978c75534fd"
+    },
+    {
+      "path": "docs/POTETO-2026-10-24.md",
+      "git_blob_sha1": "7dfa1b4d3d1274362021f049525b48bc2dc9f40a"
+    },
+    {
+      "path": "docs/RESEARCH.md",
+      "git_blob_sha1": "bce8444f2ed2198c5dfd548b898a3c9dc7e12e4e"
+    },
+    {
+      "path": "fixtures/cases/absent_provider/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "git_blob_sha1": "200226140567930453626014afb28ed849ea774e"
+    },
+    {
+      "path": "fixtures/cases/absent_provider/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/absent_provider/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/absent_provider/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/absent_provider/manifest.json",
+      "git_blob_sha1": "05909a6777a7e09e71e3c112908f6857d580ae6d"
+    },
+    {
+      "path": "fixtures/cases/advance_valid/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/advance_valid/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/advance_valid/expected.json",
+      "git_blob_sha1": "5ecc3c9bd911ac1025ffc11a3b0b2f86fbc5e44d"
+    },
+    {
+      "path": "fixtures/cases/absent_provider/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/absent_provider/provider.json",
+      "git_blob_sha1": "19765bd501b636fce433540d9e6735f51d66151d"
+    },
+    {
+      "path": "fixtures/cases/advance_valid/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/advance_valid/manifest.json",
+      "git_blob_sha1": "e70f84bd2021bff393e749a0ba0ce72ac6dd4725"
+    },
+    {
+      "path": "fixtures/cases/advance_valid/provider.json",
+      "git_blob_sha1": "19765bd501b636fce433540d9e6735f51d66151d"
+    },
+    {
+      "path": "fixtures/cases/advance_valid/operation.json",
+      "git_blob_sha1": "af345880d14b9ba91efb452a8b7b6f7a70c3cb27"
+    },
+    {
+      "path": "fixtures/cases/duplicate_publish/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/duplicate_publish/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/duplicate_publish/manifest.json",
+      "git_blob_sha1": "d7cd68592a5a77f6b1239e78a962f617b83dd2e5"
+    },
+    {
+      "path": "fixtures/cases/duplicate_publish/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/duplicate_publish/provider.json",
+      "git_blob_sha1": "ce36c9ffaf34b4f5a16ad3b0174954d81f597336"
+    },
+    {
+      "path": "fixtures/cases/effect_receipt_missing/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/effect_receipt_missing/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/effect_receipt_missing/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/duplicate_publish/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/effect_receipt_missing/manifest.json",
+      "git_blob_sha1": "7c9f8ad04b1f6bdde52507f84fd2133d017e3d88"
+    },
+    {
+      "path": "fixtures/cases/effect_receipt_missing/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/foreign_session/authority.json",
+      "git_blob_sha1": "1e980faf231daee2507aec4f045c4acb54babfe8"
+    },
+    {
+      "path": "fixtures/cases/effect_receipt_missing/provider.json",
+      "git_blob_sha1": "1bb9d8e2c4612475f61c0a19ba6580eb3c8dbd3e"
+    },
+    {
+      "path": "fixtures/cases/foreign_session/manifest.json",
+      "git_blob_sha1": "748354172db700f4ab38bbec6f4df3f47e523f3d"
+    },
+    {
+      "path": "fixtures/cases/foreign_session/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/effect_receipt_missing/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/foreign_session/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/foreign_session/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/foreign_session/provider.json",
+      "git_blob_sha1": "9f3a37cbfd5c7bee486c740f2f48a4b0b23c65d8"
+    },
+    {
+      "path": "fixtures/cases/foreign_session/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/illegal_transition/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/illegal_transition/manifest.json",
+      "git_blob_sha1": "ff304ce2e37d4540dee88380dbc3ea680181d445"
+    },
+    {
+      "path": "fixtures/cases/illegal_transition/operation.json",
+      "git_blob_sha1": "b513a6d44e03ca4534e5fe6c1a998eda19a68e3e"
+    },
+    {
+      "path": "fixtures/cases/illegal_transition/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/illegal_transition/provider.json",
+      "git_blob_sha1": "9f3a37cbfd5c7bee486c740f2f48a4b0b23c65d8"
+    },
+    {
+      "path": "fixtures/cases/illegal_transition/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/duplicate_publish/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/incomplete_ledger/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/illegal_transition/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/incomplete_ledger/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/incomplete_ledger/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/incomplete_ledger/manifest.json",
+      "git_blob_sha1": "4c08e2f09d5b19b98f29177e98aa7d08e592ca64"
+    },
+    {
+      "path": "fixtures/cases/incomplete_ledger/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/incomplete_ledger/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/publish_valid/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/publish_valid/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/publish_valid/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/publish_valid/manifest.json",
+      "git_blob_sha1": "6b9d2d8469858e8f02cd2b011bcca9ff395bce8a"
+    },
+    {
+      "path": "fixtures/cases/publish_valid/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/publish_valid/provider.json",
+      "git_blob_sha1": "9f3a37cbfd5c7bee486c740f2f48a4b0b23c65d8"
+    },
+    {
+      "path": "fixtures/cases/incomplete_ledger/provider.json",
+      "git_blob_sha1": "8f1fcd68a54e9223b350564885ffdda791e23e62"
+    },
+    {
+      "path": "fixtures/cases/resume_checkpoint/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/publish_valid/expected.json",
+      "git_blob_sha1": "5ecc3c9bd911ac1025ffc11a3b0b2f86fbc5e44d"
+    },
+    {
+      "path": "fixtures/cases/resume_checkpoint/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/resume_checkpoint/operation.json",
+      "git_blob_sha1": "4a407e64d045c88f5cc77fbda4deb4244ba0241f"
+    },
+    {
+      "path": "fixtures/cases/resume_checkpoint/expected.json",
+      "git_blob_sha1": "5ecc3c9bd911ac1025ffc11a3b0b2f86fbc5e44d"
+    },
+    {
+      "path": "fixtures/cases/resume_checkpoint/manifest.json",
+      "git_blob_sha1": "06a869921c08d99eaefe48c9dd93252a80f3cf62"
+    },
+    {
+      "path": "fixtures/cases/resume_checkpoint/provider.json",
+      "git_blob_sha1": "19765bd501b636fce433540d9e6735f51d66151d"
+    },
+    {
+      "path": "fixtures/cases/resume_checkpoint/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/resume_wrong_checkpoint/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/resume_wrong_checkpoint/manifest.json",
+      "git_blob_sha1": "342eceb51b5ddd5ace6d8ddb8d551f89a0293fda"
+    },
+    {
+      "path": "fixtures/cases/resume_wrong_checkpoint/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/resume_wrong_checkpoint/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/resume_wrong_checkpoint/provider.json",
+      "git_blob_sha1": "19765bd501b636fce433540d9e6735f51d66151d"
+    },
+    {
+      "path": "fixtures/cases/resume_wrong_checkpoint/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/resume_wrong_checkpoint/operation.json",
+      "git_blob_sha1": "7c7ddcde6d228277ef542bf9d7692786e5d338fc"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciled/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciled/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciled/expected.json",
+      "git_blob_sha1": "5ecc3c9bd911ac1025ffc11a3b0b2f86fbc5e44d"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciled/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciled/manifest.json",
+      "git_blob_sha1": "8af07d835375cf2e006712b74246fe7a178993dd"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciled/operation.json",
+      "git_blob_sha1": "d2999e24b44478ec90c28bf5baaacf8e7507b291"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_early/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciled/provider.json",
+      "git_blob_sha1": "f4a014589af4d1156b4ac44c30351f828a50cc40"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_early/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_early/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_early/manifest.json",
+      "git_blob_sha1": "cd2af0eea0e8145fc5a4bde615c8122fb25a6afb"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_early/operation.json",
+      "git_blob_sha1": "d2999e24b44478ec90c28bf5baaacf8e7507b291"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_early/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_early/provider.json",
+      "git_blob_sha1": "406fd0dda7e7d4e92b23d446c0d7e2145d9e92c6"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_late/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_late/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_late/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_late/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_late/provider.json",
+      "git_blob_sha1": "4cf895c89546b6f12d338e97c40ba29634eff314"
+    },
+    {
+      "path": "fixtures/cases/retry_unknown_effect/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/retry_unknown_effect/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_late/manifest.json",
+      "git_blob_sha1": "a6ff1cdc2d71b5c994fa7d12ee8bca75fa1b70eb"
+    },
+    {
+      "path": "fixtures/cases/retry_reconciliation_too_late/operation.json",
+      "git_blob_sha1": "d2999e24b44478ec90c28bf5baaacf8e7507b291"
+    },
+    {
+      "path": "fixtures/cases/retry_unknown_effect/expected.json",
+      "git_blob_sha1": "bec17a36293eaee1dc7e0f110642b17ef827bba2"
+    },
+    {
+      "path": "fixtures/cases/retry_unknown_effect/operation.json",
+      "git_blob_sha1": "d2999e24b44478ec90c28bf5baaacf8e7507b291"
+    },
+    {
+      "path": "fixtures/cases/retry_unknown_effect/manifest.json",
+      "git_blob_sha1": "591bb10a1fb9bb2781d1f16e467effc71183a3d2"
+    },
+    {
+      "path": "fixtures/cases/retry_unknown_effect/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/stale_head/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/stale_head/manifest.json",
+      "git_blob_sha1": "40824b1af0642c9064a906850223c23baf814116"
+    },
+    {
+      "path": "fixtures/cases/stale_head/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/retry_unknown_effect/provider.json",
+      "git_blob_sha1": "ef8ead2b7ed16817d6169e40fd6f08c8f81d5d7f"
+    },
+    {
+      "path": "fixtures/cases/stale_head/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/stale_head/preflight.json",
+      "git_blob_sha1": "615c06186f2f65b7796838d73203e2d9ad268db1"
+    },
+    {
+      "path": "fixtures/cases/stale_head/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/stale_head/provider.json",
+      "git_blob_sha1": "9f3a37cbfd5c7bee486c740f2f48a4b0b23c65d8"
+    },
+    {
+      "path": "fixtures/cases/success_without_effect/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/success_without_effect/manifest.json",
+      "git_blob_sha1": "9f2cc42066239fe0b1a53f27ceb34eb76dcb17eb"
+    },
+    {
+      "path": "fixtures/cases/success_without_effect/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/success_without_effect/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/success_without_effect/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/success_without_effect/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/success_without_effect/provider.json",
+      "git_blob_sha1": "f4a014589af4d1156b4ac44c30351f828a50cc40"
+    },
+    {
+      "path": "fixtures/cases/terminal_false_receipt/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/terminal_false_receipt/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/terminal_false_receipt/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/terminal_false_receipt/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/terminal_false_receipt/operation.json",
+      "git_blob_sha1": "3c3a8781be528e80af42ef256d4143b128ebc450"
+    },
+    {
+      "path": "fixtures/cases/terminal_false_receipt/provider.json",
+      "git_blob_sha1": "c279ea098d6c02ad7d9ec83178132845d2351ec3"
+    },
+    {
+      "path": "fixtures/cases/terminal_valid/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/terminal_valid/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/terminal_false_receipt/manifest.json",
+      "git_blob_sha1": "87d8bef5b941f460f3de4e2e2968166c812c365b"
+    },
+    {
+      "path": "fixtures/cases/terminal_valid/expected.json",
+      "git_blob_sha1": "5ecc3c9bd911ac1025ffc11a3b0b2f86fbc5e44d"
+    },
+    {
+      "path": "fixtures/cases/terminal_valid/manifest.json",
+      "git_blob_sha1": "6e471eba4b5c84a60ba1e13198d29f6113602a94"
+    },
+    {
+      "path": "fixtures/cases/terminal_valid/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/unknown_no_success/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/terminal_valid/operation.json",
+      "git_blob_sha1": "3c3a8781be528e80af42ef256d4143b128ebc450"
+    },
+    {
+      "path": "fixtures/cases/terminal_valid/provider.json",
+      "git_blob_sha1": "9f3a37cbfd5c7bee486c740f2f48a4b0b23c65d8"
+    },
+    {
+      "path": "fixtures/cases/unknown_no_success/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/unknown_no_success/expected.json",
+      "git_blob_sha1": "bec17a36293eaee1dc7e0f110642b17ef827bba2"
+    },
+    {
+      "path": "fixtures/cases/unknown_no_success/manifest.json",
+      "git_blob_sha1": "21a2335b2d4b8ed60d506eea450f250e10dc86d5"
+    },
+    {
+      "path": "fixtures/cases/unknown_no_success/operation.json",
+      "git_blob_sha1": "c4c5733b1812042f184c19c5e3a01dee250c3ac4"
+    },
+    {
+      "path": "fixtures/cases/unknown_no_success/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/unsupported_success/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/unsupported_success/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/unsupported_success/manifest.json",
+      "git_blob_sha1": "ad983d3fcfaa8b243ea96141e71e1603b4f55dad"
+    },
+    {
+      "path": "fixtures/cases/unknown_no_success/provider.json",
+      "git_blob_sha1": "19765bd501b636fce433540d9e6735f51d66151d"
+    },
+    {
+      "path": "fixtures/cases/unsupported_success/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/unsupported_success/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/unsupported_success/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/wrong_binding/evidence.json",
+      "git_blob_sha1": "cda0ccf74cc8dcafa1437663ae52bc1edc8a3a65"
+    },
+    {
+      "path": "fixtures/cases/wrong_binding/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/wrong_binding/manifest.json",
+      "git_blob_sha1": "f628ef4cdd4df842c9b013d86b8e9e386f8e4376"
+    },
+    {
+      "path": "fixtures/cases/unsupported_success/provider.json",
+      "git_blob_sha1": "d0822dbb489ca494b89a6f7817f0a47359ea89c5"
+    },
+    {
+      "path": "fixtures/cases/wrong_binding/provider.json",
+      "git_blob_sha1": "9f3a37cbfd5c7bee486c740f2f48a4b0b23c65d8"
+    },
+    {
+      "path": "fixtures/cases/wrong_epoch/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/wrong_binding/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/wrong_epoch/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/wrong_binding/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/wrong_binding/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/wrong_epoch/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/wrong_epoch/manifest.json",
+      "git_blob_sha1": "313d1cfa05ddb8a13770ac82a1aab927b222ab70"
+    },
+    {
+      "path": "fixtures/cases/wrong_provider_key/authority.json",
+      "git_blob_sha1": "0ac87e5a5636bbe7af22b1dd07dbab6c1e9809b0"
+    },
+    {
+      "path": "fixtures/cases/wrong_epoch/preflight.json",
+      "git_blob_sha1": "c94ad3054af4d24f91baab21ac6766b8da9de6a7"
+    },
+    {
+      "path": "fixtures/cases/wrong_epoch/provider.json",
+      "git_blob_sha1": "9f3a37cbfd5c7bee486c740f2f48a4b0b23c65d8"
+    },
+    {
+      "path": "fixtures/cases/wrong_provider_key/expected.json",
+      "git_blob_sha1": "12a4278373828985f6953edf3c5e31b75d12e69d"
+    },
+    {
+      "path": "fixtures/cases/wrong_provider_key/evidence.json",
+      "git_blob_sha1": "8186a013c8c93f23e9a82659f1177b9fb1d24735"
+    },
+    {
+      "path": "fixtures/cases/wrong_provider_key/manifest.json",
+      "git_blob_sha1": "10ed12c2c6f7083b4af6dd63bd8479a39d6f4012"
+    },
+    {
+      "path": "fixtures/cases/wrong_provider_key/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/wrong_epoch/operation.json",
+      "git_blob_sha1": "f21912533833a9cca0af85112631568d1a99c4b3"
+    },
+    {
+      "path": "fixtures/cases/wrong_provider_key/preflight.json",
+      "git_blob_sha1": "0dd2da2d81fa3daddf72401a4a8391621ac6f5cf"
+    },
+    {
+      "path": "fixtures/cases/wrong_provider_key/provider.json",
+      "git_blob_sha1": "f71cc70e806051cbf6fbf720c0f8177871fb5224"
+    },
+    {
+      "path": "pyproject.toml",
+      "git_blob_sha1": "c089a5858f9ece31ad1ea6b4e066efce419a122b"
+    },
+    {
+      "path": "scripts/check_models.sh",
+      "git_blob_sha1": "000d9673c14601042df8d956eb46ab502f6359a6"
+    },
+    {
+      "path": "specs/operation.qnt",
+      "git_blob_sha1": "7bc267e3d0c55be871a61a99e0e69f069e77fc52"
+    },
+    {
+      "path": "src/formal_verification_lab/__init__.py",
+      "git_blob_sha1": "e06e2e46f8c5119e0d64dae55671eff78d18ab22"
+    },
+    {
+      "path": "specs/canary.qnt",
+      "git_blob_sha1": "501a09f447c39e1c7a8b8e2895e5dd7b67d317ce"
+    },
+    {
+      "path": "src/formal_verification_lab/bundles.py",
+      "git_blob_sha1": "7ba9b4826202a74af4d9af516bbbe03c897bfbf5"
+    },
+    {
+      "path": "src/formal_verification_lab/formal_contracts.py",
+      "git_blob_sha1": "8daf478af6a6388d70030f653b9ed0f32b999b36"
+    },
+    {
+      "path": "src/formal_verification_lab/contracts.py",
+      "git_blob_sha1": "4d69911ee85fb058d36fd6a859b831ee91118f59"
+    },
+    {
+      "path": "src/formal_verification_lab/kernel.py",
+      "git_blob_sha1": "fffbfb00cda294f0433a0e727719c9529e1498fa"
+    },
+    {
+      "path": "src/formal_verification_lab/model_explore.py",
+      "git_blob_sha1": "9c66f8ede321fb15bf84eae7d69aed9d555a736a"
+    },
+    {
+      "path": "tests/test_kernel.py",
+      "git_blob_sha1": "680edb117b3d97fad3bef3f77c3da360c6208370"
+    },
+    {
+      "path": "src/formal_verification_lab/cli.py",
+      "git_blob_sha1": "2196624f093d603041a2be2016d2dd7d29e6d3b5"
+    },
+    {
+      "path": "tests/test_model_explore.py",
+      "git_blob_sha1": "b09b173a47f06a6653c5b5f7ef0533f3b0684017"
+    },
+    {
+      "path": "tests/test_properties.py",
+      "git_blob_sha1": "ae3fc452c4b80b98c0e8b41781463bd8191d8836"
+    }
+  ]
+}

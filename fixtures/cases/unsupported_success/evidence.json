@@ -1,0 +1,8 @@
+{
+  "captured_seq": 3,
+  "checkpoint_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "head": "head-a",
+  "operation_id": "op-1",
+  "session_id": "session-1"
+}

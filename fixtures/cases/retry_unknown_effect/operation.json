@@ -1,0 +1,13 @@
+{
+  "action_seq": 12,
+  "from_state": "UNKNOWN",
+  "head": "head-a",
+  "idempotency_key": "op-1",
+  "kind": "RETRY",
+  "operation_id": "op-1",
+  "prior_attempt_seq": 8,
+  "reports_success": false,
+  "requests_effect": false,
+  "session_id": "session-1",
+  "to_state": "RECONCILING"
+}

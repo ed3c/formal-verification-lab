@@ -1,0 +1,12 @@
+{
+  "action_seq": 10,
+  "from_state": "CLAIMED",
+  "head": "head-a",
+  "idempotency_key": "op-1",
+  "kind": "PUBLISH",
+  "operation_id": "op-1",
+  "reports_success": true,
+  "requests_effect": true,
+  "session_id": "session-1",
+  "to_state": "EXECUTING"
+}
