@@ -65,6 +65,14 @@ Run P4 from a Python environment installed from `requirements-verification.lock.
 
 The runner uses its own `sys.executable`. It saves package versions, commands, limits, stdout, stderr, exits, and before and after input digests. A missing or mismatched pinned environment returns `NOT_RUN`.
 
+## Read selected source data and prepare blind packets
+
+`python3 tools/read_bundle.py BUNDLE.json` reads only explicitly declared local files and JSON pointers. It preserves MISSING, UNREADABLE and DRIFT while retaining unrelated values. Its UTF-8 stdout limit is 1..65536 bytes, including the final newline. Source reads have no input-memory cap. The implementation uses POSIX descriptor APIs.
+
+`PYTHONPATH=src python3 -m formal_verification_lab.blind_outcome --help` describes the closed eight-question format and neutral packet CLI. Schema validity does not score truth. The pure helpers in `blind_protocol.py` isolate profile data, provide task-local zsh overrides and prepare exact typed stdin. None starts a model or grants runtime effects.
+
+See the [verification protocol](docs/NATIVE-READBACK.md) and [reader handoff](docs/READER-HANDOFF.md). Public tests use synthetic data. Private experiment sources, independent answers, failures and costs stay outside Git.
+
 ## Claim boundary
 
 The model checks only the declared formal specification and bounds. `BOUNDED_PASS` is not production acceptance. Missing facts remain `UNKNOWN`; observed contradictions produce scoped findings. The current Session makes engineering judgments within the user-authorized scope. The Lab does not mutate the producer or Provider.

@@ -15,7 +15,15 @@ The current Session is the engineering judgment subject. The standalone source r
 
 The fresh external P1/P3/P4 receipts bind exact checker inputs and preserve command, version, bound, exit and trace artifacts outside the repository. The current partial-evidence interface is documented in PARTIAL-EVIDENCE.md. Findings never grant production effect or merge permission.
 
-The stopped C2 task's retained20-file changes were imported in a new Session engineering commit after65 Python tests passed. That is not a claim that the old Native candidate completed or integrated. Current source work extends discovery, explicit partial selection and per-property dependency checking. All101 Python tests passed with25 source/test/checker file hashes unchanged during execution; the23 synthetic expected verdicts are unchanged.
+The stopped C2 task's retained20-file changes were imported in a new Session engineering commit after65 Python tests passed. That is not a claim that the old Native candidate completed or integrated. Current source work extends discovery, explicit partial selection and per-property dependency checking. In that prior source snapshot, all101 Python tests passed with25 source/test/checker file hashes unchanged during execution; the23 synthetic expected verdicts were unchanged.
+
+## Reader and comparison protocol source delivery
+
+The public source now includes a bounded-stdout partial reader, a closed answer/packet validator, and pure helpers for independent profiles, explicit zsh temporary overrides and exact typed stdin. Synthetic tests cover their software contracts. The [protocol](NATIVE-READBACK.md) separates process completion, schema validity, semantic truth, exposure, blind judgment and costs. The [handoff](READER-HANDOFF.md) starts from a repository or workspace without an original identity qualification gate.
+
+The current reader/protocol source suite passed 215 tests and48 subtests with no skips. The23 original synthetic control expectations still match. Actual execution receipts remain outside the repository.
+
+Historical Native source data, judge seals, valid wrong answers, failed batches and costs remain in the external evidence store. No new Native trial is asserted by this source delivery. Source tests do not establish universal blind gain, full Native refinement, runtime acceptance, rollout or merge authority. P1 through P4 source and their checker receipts are unchanged.
 
 ## Historical development snapshots
 
