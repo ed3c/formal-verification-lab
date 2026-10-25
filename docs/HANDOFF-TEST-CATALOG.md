@@ -24,3 +24,21 @@ to its original assumptions. Native/effect acquisition and whole-parent cost imp
 remain separate unfinished claims. No push, remote CI, installed-version switch or merge
 is part of this local delivery. Read actual Git HEAD and private receipt bindings before
 continuing; the existing Draft PR head does not yet contain this source.
+
+## Local continuation record
+
+The workspace evidence package `local-cost-continuation-20261025` adds a completed
+caller diagnostic at one fixed caller source and a balanced, four-execution
+comparison of one historical verification demand. Original failed receipts remain
+preserved. The diagnostic is explicitly requested software scope, not source-derived
+candidate acceptance. Both observed cost pairs were lower, but the small sample,
+uncontrolled ambient load and missing engineering/model costs leave whole CPVC
+improvement unestablished. Raw caller inputs, receipts, timings and source bindings
+remain private workspace evidence, not public Lab fixtures.
+
+The follow-up changes no checker, model, route instructions or test selection.
+Existing unchanged Lab test/model evidence retains its original source and scope;
+no new solver or mandatory CI job ran. A fresh original resource observation still
+allowed no Native start credit, so real effect capture remains NOT_RUN and dependent
+conformance remains UNKNOWN. No alternate carrier, runtime switch, source push,
+remote CI, merge or protected-resource write occurred.
