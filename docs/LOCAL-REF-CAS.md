@@ -73,3 +73,5 @@ This design adds no evaluator write client, new producer identity protocol, mana
 Stop the affected effect path for resource refusal, missing permission, source or configuration drift, an unexpected writer, an unexpected ref, a journal failure, timeout, decode error, interruption, or a started-only receipt. Preserve the original result and use bounded readback. Do not replay an unknown operation or silently classify it as a known CAS refusal.
 
 Retain failures, partial inputs, UNKNOWN findings, and measured costs. Unavailable usage or money remains unknown. No result here switches the active version, merges a branch, or changes #448, #450, or escrow. A later admitted run is new evidence under its recorded source and boundary; it does not overwrite historical failures.
+
+The separate [abstract CAS model checks](LOCAL-REF-CAS-FORMAL.md) now have an eight-step bounded safety result, two planted counterexamples and three reachability witnesses. They do not change the NOT_RUN status of these real fixture cases or establish effect-retry conformance.

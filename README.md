@@ -77,6 +77,8 @@ See the [verification protocol](docs/NATIVE-READBACK.md) and [reader handoff](do
 
 The [local ref CAS design](docs/LOCAL-REF-CAS.md) selects the next real effect observation in isolated fixtures. Its rejection and positive cases remain NOT_RUN until normal Native admission and capture; they do not establish retry conformance.
 
+The separate [abstract CAS checks](docs/LOCAL-REF-CAS-FORMAL.md) have an eight-step bounded safety result, two planted counterexamples and three reachability witnesses, including UNKNOWN with an effect. These model results do not supply a Native trace.
+
 ## Claim boundary
 
 The model checks only the declared formal specification and bounds. `BOUNDED_PASS` is not production acceptance. Missing facts remain `UNKNOWN`; observed contradictions produce scoped findings. The current Session makes engineering judgments within the user-authorized scope. The Lab does not mutate the producer or Provider.
