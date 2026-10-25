@@ -1,6 +1,12 @@
 # formal-verification-lab
 
-`formal-verification-lab` is a standalone, read-only evaluator for Agent Harness state-transition safety contracts. The public core uses synthetic data. It has no Soodles runtime dependency, Provider credentials, network adapter, dispatch path, production admission path, or merge authority.
+`formal-verification-lab` is a standalone, read-only evaluator for selected state-transition safety contracts and bounded test-replacement evidence. The public core uses synthetic data. It has no Soodles runtime dependency, Provider credentials, network adapter, dispatch path, production admission path, or merge authority.
+
+## Formal route and test retention
+
+The portable [formal-route skill](.agents/skills/formal-route/SKILL.md) is the method SSOT for any Repo. It examines whether tests protect independent requirements or merely endorse implementation, then selects the smallest relevant source, finite, property-based, model or trace check. Soodles keeps a thin entry to this method and its original Test Manager; other Repos use their own tools. Lab availability is not a prerequisite for ordinary tests.
+
+The [method and evidence layers](docs/FORMAL-ROUTE.md) distinguish unit behavior, CI commit/environment execution, formal assumptions, actual conformance and Agent behavior eval. New route-behavior claims require actual eval skills and fresh consumer evidence, not keyword checks. The [portable interaction](docs/TEST-RETENTION-INTERACTION.md) uses `fvl retention` to compare a supplied finite relation without running target code or choosing tests. It preserves UNKNOWN, counterexamples and cost, and never makes the final retention decision. A simple finite subset does not require a new solver run or mandatory formal CI job.
 
 ## Current verification status
 

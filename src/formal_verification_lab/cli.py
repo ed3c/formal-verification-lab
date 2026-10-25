@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .bundles import BundleError, discover, load_bundle, load_selection
 from .kernel import PROPERTIES, evaluate
+from .retention import evaluate_retention
 
 
 def _selection(value: str) -> tuple[str, str]:
@@ -32,11 +33,17 @@ def main(argv: list[str] | None = None) -> int:
     discovery.add_argument("--max-entries", type=int, default=10_000)
     controls = sub.add_parser("controls", help="Check named synthetic controls")
     controls.add_argument("directory")
+    retention = sub.add_parser("retention", help="Check selected finite replacement coverage; never decide test value or run tests")
+    retention.add_argument("directory")
+    retention.add_argument("--study", required=True, help="Relative JSON study path inside the selected evidence root")
+    retention.add_argument("--fail-on-counterexample", action="store_true")
     args = parser.parse_args(argv)
-    if args.command in ("evaluate", "discover"):
+    if args.command in ("evaluate", "discover", "retention"):
         try:
             if args.command == "discover":
                 result = discover(args.directory, args.pattern, args.max_depth, args.max_files, args.max_entries)
+            elif args.command == "retention":
+                result = evaluate_retention(args.directory, args.study)
             else:
                 record = (load_selection(args.bundle, (_selection(value) for value in args.select))
                           if args.select else load_bundle(args.bundle))
@@ -45,7 +52,7 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps({"status": "UNKNOWN", "error": str(exc), "authorizes_landing": False}))
             return 3
         print(json.dumps(result, sort_keys=True, indent=2))
-        if args.command == "evaluate" and args.fail_on_counterexample and result["verdict"] == "COUNTEREXAMPLE":
+        if args.command in ("evaluate", "retention") and args.fail_on_counterexample and result["verdict"] == "COUNTEREXAMPLE":
             return 2
         return 0
     reports = []
