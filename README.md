@@ -79,6 +79,8 @@ The [local ref CAS design](docs/LOCAL-REF-CAS.md) selects the next real effect o
 
 The separate [abstract CAS checks](docs/LOCAL-REF-CAS-FORMAL.md) have an eight-step bounded safety result, two planted counterexamples and three reachability witnesses, including UNKNOWN with an effect. These model results do not supply a Native trace.
 
+The unchanged CAS model now also has [three-obligation inductive checks](docs/LOCAL-REF-CAS-INDUCTION.md), with a phase-consistent candidate and negative controls for initialization, preservation and safety implication. This removes the eight-step proof-depth limit for that fixed symbolic model under its stated assumptions, without establishing Native conformance.
+
 ## Claim boundary
 
 The model checks only the declared formal specification and bounds. `BOUNDED_PASS` is not production acceptance. Missing facts remain `UNKNOWN`; observed contradictions produce scoped findings. The current Session makes engineering judgments within the user-authorized scope. The Lab does not mutate the producer or Provider.

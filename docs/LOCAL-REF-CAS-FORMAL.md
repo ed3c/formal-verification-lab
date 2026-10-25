@@ -2,6 +2,8 @@
 
 The new CAS specification has an eight-step **BOUNDED_PASS**, two planted counterexamples and three reachability witnesses. These are actual Quint/Apalache results for an abstract model. The real fixture cases in [the acquisition design](LOCAL-REF-CAS.md) remain NOT_RUN, and effect-retry conformance remains UNKNOWN.
 
+The same unchanged model now also has [inductive invariant checks](LOCAL-REF-CAS-INDUCTION.md). Initialization, preservation and safety implication passed; stage-specific negative controls verify all three obligations. The bounded results below retain their original scope and evidence.
+
 ## Scope and assumptions
 
 `specs/local_ref_cas.qnt` models one fixed ref and a separate unchanged ref. OIDs 0, 1 and 2 are abstract symbols. The initial expected-old is either 0 (matching) or 2 (mismatched). The model allows one offer, one trusted atomic Git CAS, completion receipt delivery or loss, and one readback. It has no retry, native operation key, authorization grant or full Soodles lifecycle.
@@ -29,7 +31,7 @@ The [portable evidence](evidence/local-ref-cas.json) contains the exact model ha
 
 The first wrapper incorrectly supplied `--main` to `typecheck`; the CLI rejected that argument before checking the model. A later wrapper expected a PID on stdout even though `--out` suppresses console output. Both failures and runner versions are retained. The successful typechecks and safety result were validated and reused without rerunning them. Cleanup readbacks found each chosen endpoint bindable and no Apalache server command matching its port. Backend PIDs were unavailable in the suppressed output and were not invented.
 
-This is bounded model checking, not an inductive proof, liveness/fairness result, verification of Git's implementation or runtime refinement. The existing operation protocol was unchanged and was not rerun.
+The queries recorded above are bounded model checks. Their separate inductive extension is linked above. Neither establishes liveness/fairness, verification of Git's implementation or runtime refinement. The existing operation protocol was unchanged and was not rerun.
 
 ## Reproduce with the fixed tools
 

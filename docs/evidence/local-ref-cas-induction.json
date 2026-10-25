@@ -1,0 +1,283 @@
+{
+  "schema": "fvl.cas-induction.evidence.v1",
+  "claim": "INDUCTIVE_CHECK_PASS",
+  "scope": "Fixed single-offer symbolic CAS model under its unchanged assumptions, not Native conformance",
+  "candidate_domain": {
+    "expected": [
+      0,
+      2
+    ],
+    "slots": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cardinality": 14,
+    "cardinality_checked_in_implication": true
+  },
+  "models": [
+    {
+      "path": "specs/local_ref_cas.qnt",
+      "sha256": "3fb5240f1a07f1e4c35bf4a6673a5238b969029ec2c6f0577684186cfc1bec80"
+    },
+    {
+      "path": "specs/local_ref_cas_induction.qnt",
+      "sha256": "3ab900e8c66bce76a5a8f967a34c8dc4bc2ae08a0ad03c6512725569cc9d53b2"
+    }
+  ],
+  "toolchain": {
+    "quint": "0.32.0",
+    "apalache": "0.56.1",
+    "build": "70cdaf4"
+  },
+  "independent_proof_certificate": "NOT_PRODUCED",
+  "native_CAS_trace": "NOT_RUN",
+  "effect_retry_conformance": "UNKNOWN",
+  "queries": [
+    {
+      "name": "strong",
+      "candidate": "IndInv",
+      "exit_code": 0,
+      "structured_status": "ok",
+      "obligations": [
+        {
+          "init": "q::init",
+          "step": "q::step",
+          "invariant": "q::inductiveInv",
+          "checked_depth": 0,
+          "backend_outcome": "NoError"
+        },
+        {
+          "init": "q::inductiveInv",
+          "step": "q::step",
+          "invariant": "q::inductiveInv",
+          "checked_depth": 1,
+          "backend_outcome": "NoError"
+        },
+        {
+          "init": "q::inductiveInv",
+          "step": "q::step",
+          "invariant": "q::inv",
+          "checked_depth": 0,
+          "backend_outcome": "NoError"
+        }
+      ]
+    },
+    {
+      "name": "missing-initial",
+      "candidate": "MissingInitialInv",
+      "exit_code": 1,
+      "structured_status": "violation",
+      "obligations": [
+        {
+          "init": "q::init",
+          "step": "q::step",
+          "invariant": "q::inductiveInv",
+          "checked_depth": 0,
+          "backend_outcome": "Error"
+        }
+      ],
+      "counterexample": {
+        "scope": "Candidate-invariant negative control; not a production trace",
+        "abstract_states": [
+          {
+            "attemptCount": {
+              "#bigint": "0"
+            },
+            "before": {
+              "#bigint": "0"
+            },
+            "confirmed": false,
+            "effectCount": {
+              "#bigint": "0"
+            },
+            "expected": {
+              "#bigint": "2"
+            },
+            "gitDone": false,
+            "gitOutcome": "NONE",
+            "noEffectReconciled": false,
+            "otherRef": {
+              "#bigint": "2"
+            },
+            "readbackRef": {
+              "#bigint": "-1"
+            },
+            "readbackSeen": false,
+            "receipt": "NONE",
+            "ref": {
+              "#bigint": "0"
+            },
+            "target": {
+              "#bigint": "1"
+            }
+          }
+        ],
+        "transitions": 0
+      }
+    },
+    {
+      "name": "weak-closure",
+      "candidate": "WeakInv",
+      "exit_code": 1,
+      "structured_status": "violation",
+      "obligations": [
+        {
+          "init": "q::init",
+          "step": "q::step",
+          "invariant": "q::inductiveInv",
+          "checked_depth": 0,
+          "backend_outcome": "NoError"
+        },
+        {
+          "init": "q::inductiveInv",
+          "step": "q::step",
+          "invariant": "q::inductiveInv",
+          "checked_depth": 1,
+          "backend_outcome": "Error"
+        }
+      ],
+      "counterexample": {
+        "scope": "Candidate-invariant negative control; not a production trace",
+        "abstract_states": [
+          {
+            "attemptCount": {
+              "#bigint": "1"
+            },
+            "before": {
+              "#bigint": "0"
+            },
+            "confirmed": false,
+            "effectCount": {
+              "#bigint": "1"
+            },
+            "expected": {
+              "#bigint": "0"
+            },
+            "gitDone": false,
+            "gitOutcome": "NONE",
+            "noEffectReconciled": false,
+            "otherRef": {
+              "#bigint": "2"
+            },
+            "readbackRef": {
+              "#bigint": "-1"
+            },
+            "readbackSeen": false,
+            "receipt": "STARTED",
+            "ref": {
+              "#bigint": "0"
+            },
+            "target": {
+              "#bigint": "1"
+            }
+          },
+          {
+            "attemptCount": {
+              "#bigint": "1"
+            },
+            "before": {
+              "#bigint": "0"
+            },
+            "confirmed": false,
+            "effectCount": {
+              "#bigint": "2"
+            },
+            "expected": {
+              "#bigint": "0"
+            },
+            "gitDone": true,
+            "gitOutcome": "UPDATED",
+            "noEffectReconciled": false,
+            "otherRef": {
+              "#bigint": "2"
+            },
+            "readbackRef": {
+              "#bigint": "-1"
+            },
+            "readbackSeen": false,
+            "receipt": "STARTED",
+            "ref": {
+              "#bigint": "1"
+            },
+            "target": {
+              "#bigint": "1"
+            }
+          }
+        ],
+        "transitions": 1
+      }
+    },
+    {
+      "name": "bad-projection",
+      "candidate": "BadProjectionInv",
+      "exit_code": 1,
+      "structured_status": "violation",
+      "obligations": [
+        {
+          "init": "q::init",
+          "step": "q::step",
+          "invariant": "q::inductiveInv",
+          "checked_depth": 0,
+          "backend_outcome": "NoError"
+        },
+        {
+          "init": "q::inductiveInv",
+          "step": "q::step",
+          "invariant": "q::inductiveInv",
+          "checked_depth": 1,
+          "backend_outcome": "NoError"
+        },
+        {
+          "init": "q::inductiveInv",
+          "step": "q::step",
+          "invariant": "q::inv",
+          "checked_depth": 0,
+          "backend_outcome": "Error"
+        }
+      ],
+      "counterexample": {
+        "scope": "Candidate-invariant negative control; not a production trace",
+        "abstract_states": [
+          {
+            "attemptCount": {
+              "#bigint": "1"
+            },
+            "before": {
+              "#bigint": "0"
+            },
+            "confirmed": false,
+            "effectCount": {
+              "#bigint": "1"
+            },
+            "expected": {
+              "#bigint": "0"
+            },
+            "gitDone": true,
+            "gitOutcome": "UPDATED",
+            "noEffectReconciled": true,
+            "otherRef": {
+              "#bigint": "2"
+            },
+            "readbackRef": {
+              "#bigint": "1"
+            },
+            "readbackSeen": true,
+            "receipt": "UNKNOWN",
+            "ref": {
+              "#bigint": "1"
+            },
+            "target": {
+              "#bigint": "1"
+            }
+          }
+        ],
+        "transitions": 0
+      }
+    }
+  ]
+}
