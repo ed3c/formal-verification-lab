@@ -42,3 +42,20 @@ no new solver or mandatory CI job ran. A fresh original resource observation sti
 allowed no Native start credit, so real effect capture remains NOT_RUN and dependent
 conformance remains UNKNOWN. No alternate carrier, runtime switch, source push,
 remote CI, merge or protected-resource write occurred.
+
+## Native admission follow-up
+
+Workspace case `native-effect-continuation-20261025` retains the earlier refusal
+and a new normal admission for the same two independent local CAS cases. The first
+client did not match the existing Host binary. A fresh, isolated request using
+that already-active immutable binary attached to the same Host without installation,
+restart, runtime replacement or edits to the failed request. The original task and
+its dispatch are retained; subsequent work follows its original inspect continuation.
+
+At the latest saved observation the order was active, its stage pending and attempts
+absent. Resource pressure had returned to warning with zero start credit. There is
+no observed Native attempt or CAS effect receipt, so effect capture remains NOT_RUN
+and conformance UNKNOWN. An active order is not an executed experiment. The display
+projection separately exceeded its size limit; that failure is preserved and does
+not supply task or effect evidence. Raw admission, source, resource and observer
+records remain private workspace evidence. No model or ordinary test rerun was added.
