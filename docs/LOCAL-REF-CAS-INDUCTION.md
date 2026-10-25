@@ -73,3 +73,11 @@ This claim trusts the fixed Quint translation, Apalache, Z3 and the declared mod
 The real fixture cases remain NOT_RUN and effect-retry conformance remains UNKNOWN. Worker credit was zero when proof work began. The proof used authorized foreground offline checking, without a new Host or real CAS. Any subsequent admitted Noodle source review has its own receipts and does not establish effect conformance.
 
 The original bounded evidence stays historical. Prepared Native requests retain their original source freezes and must be read back before continuation after a source update. Follow the [reader handoff](READER-HANDOFF.md); no original Owner, original Session or complete private bundle is required for Session engineering judgment.
+
+## Subsequent admitted evidence audit
+
+A resource-admitted Noodle Poteto worker reviewed source head `73d33d5245690e5a49f8fe2beb723282d524944d`, the original backend configurations, all three negative ITFs and the portable export. It launched no model queries or real CAS. The Session submitted approval with three source-bound acceptance observations. This is evidence review, not a blind trial or Native conformance.
+
+The original local integration did not complete. Its file-only candidate snapshot first refused an admitted private scratch directory. After exact evidence retention and permitted scratch cleanup, the original interface returned a candidate, but the backend then failed to add the now-absent private path (pathspec error, exit 128). The error ACK caused an explicit control-ACK refusal. The candidate, review, error and raw terminal evidence remain retained. No control was replayed or state edited to manufacture completion; the original stage remains in review. A recoverable error label alone is not authorization to retry.
+
+The audit metadata reports 194 seconds and raw usage reports 492334 input tokens (429696 cached) and 9815 output tokens. Actual USD cost remains UNKNOWN; a metadata cost of zero is not a billing receipt. These costs are separate from the 32.140 seconds for one typecheck and four model queries. This documentation follow-up does not change the audited model or upgrade the incomplete integration.
