@@ -8,6 +8,8 @@ from pathlib import Path
 from .bundles import BundleError, discover, load_bundle, load_selection
 from .kernel import PROPERTIES, evaluate
 from .retention import evaluate_retention
+from .catalog import query_catalog
+from .mapping import measure_mapping
 
 
 def _selection(value: str) -> tuple[str, str]:
@@ -37,10 +39,26 @@ def main(argv: list[str] | None = None) -> int:
     retention.add_argument("directory")
     retention.add_argument("--study", required=True, help="Relative JSON study path inside the selected evidence root")
     retention.add_argument("--fail-on-counterexample", action="store_true")
+    catalog = sub.add_parser("catalog", help="Describe supplied test classifications; never select or execute tests")
+    catalog.add_argument("directory")
+    catalog.add_argument("--catalog", required=True, help="Relative catalog JSON path inside the selected root")
+    for dimension in ("module", "method", "environment", "granularity"):
+        catalog.add_argument("--" + dimension, action="append")
+    catalog.add_argument("--list", action="store_true", dest="list_controls")
+    mapping = sub.add_parser("mapping", help="Measure a supplied finite source-location relation; never infer test value")
+    mapping.add_argument("directory")
+    mapping.add_argument("--study", required=True)
     args = parser.parse_args(argv)
-    if args.command in ("evaluate", "discover", "retention"):
+    if args.command in ("evaluate", "discover", "retention", "catalog", "mapping"):
         try:
-            if args.command == "discover":
+            if args.command == "mapping":
+                result = measure_mapping(args.directory, args.study)
+            elif args.command == "catalog":
+                filters = {field: getattr(args, option) or [] for field, option in (
+                    ("modules", "module"), ("methods", "method"), ("environments", "environment"),
+                    ("granularity", "granularity"))}
+                result = query_catalog(args.directory, args.catalog, filters=filters, include_controls=args.list_controls)
+            elif args.command == "discover":
                 result = discover(args.directory, args.pattern, args.max_depth, args.max_files, args.max_entries)
             elif args.command == "retention":
                 result = evaluate_retention(args.directory, args.study)

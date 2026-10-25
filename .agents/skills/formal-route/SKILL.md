@@ -9,6 +9,10 @@ description: 評估測試是否保護獨立產品契約，選擇必要的形式�
 
 先讀 [測試價值與方法](../../../docs/FORMAL-ROUTE.md)。原 Goal、Measurement、Effort 與有效續行沿用；只有新的可反駁前提才重新思考，不增加固定回合、測項數或決策數門檻。
 
+分類或統計測項時引用 [測試分類契約](../../../docs/TEST-CATALOG.md)：方法、執行環境、受保護的行為模組、保留裁決與需求條件分開。CI 是環境，必要性依具體觸發判定；多標籤按原 ID 去重並分粒度計數。用唯讀 `catalog` 查詢 caller 自有資料，不由標籤新增選測、跳過或 gate；欄位齊全不證明價值，未知必要數不能填零。
+
+完整跨 Repo 資料流與工具責任引用 [交互契約](../../../docs/ROUTE-INTERACTION.md)，來源定位品質引用 [映射量測契約](../../../docs/SOURCE-MAPPING.md)。本入口保留方法與工程判斷；機械欄位、拒絕、讀回與度量交原程式。文件不因移動而變成可執行流程，>99% 只適用實際量測的固定母體，不延伸為語義或價值保證。
+
 先問測試是否驗證產品需求，而非替目前實作背書。逐項核對獨立 Oracle、外部契約／不變量、具體失效判別、替代覆蓋、實際觸發與成本。必要與按需測試都接受同一評估。優先處理 Implementation-Coupled Testing、Self-Verification 與 Oracle Problem；另一個 Agent、綠燈、coverage、測項數或模型一致都不自動解決它們。
 
 若是明確重複或脆弱實作預期，先用原契約與具體正／負例判斷。有限替代覆蓋問題使用 [互動契約](../../../docs/TEST-RETENTION-INTERACTION.md)，保持原 fixture、entrypoint、來源與觀測界限。若未決點是狀態、並發、重試、UNKNOWN 效果或純函式性質，再按方法文件選 Quint／Apalache、歸納、P4 或實際 trace conformance。不要為了使用 formal-route 強迫所有測試跑 solver 或新增永久 formal job。

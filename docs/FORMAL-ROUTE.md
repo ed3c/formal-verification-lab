@@ -16,6 +16,14 @@ For each negative scenario, verify the nominal baseline and change only the inte
 
 ## Evidence layers and known/unknown questions
 
+Classify and count controls through [the test catalog](TEST-CATALOG.md). Keep
+method, environment, protected behavior module, retention and conditional demand
+separate; the catalog is not a selector, oracle or proof of necessity.
+Use [the interaction contract](ROUTE-INTERACTION.md) for caller tools and Managers,
+and [finite mapping quality](SOURCE-MAPPING.md) for source-location metrics.
+Keep deterministic paths in their original code/contracts, not additional
+probabilistic route choices or a prose state machine.
+
 | Layer | What an actual result can establish | What it does not establish |
 |---|---|---|
 | Unit/property/contract test | Selected implementation behavior agrees with an independently justified expected result for its exercised inputs/properties. | All inputs, unmodeled user requirements, or correctness of an implementation-derived oracle. |
