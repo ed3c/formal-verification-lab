@@ -59,3 +59,34 @@ and conformance UNKNOWN. An active order is not an executed experiment. The disp
 projection separately exceeded its size limit; that failure is preserved and does
 not supply task or effect evidence. Raw admission, source, resource and observer
 records remain private workspace evidence. No model or ordinary test rerun was added.
+
+
+## Completed acquisition and maintenance — 2026-10-26
+
+The preceding pending-admission section is historical. The original admitted worker
+later ran; its first collector lost pre-decoding bytes and stopped, leaving its
+selected finding UNKNOWN. A normally admitted successor used two different fresh
+fixtures and the corrected raw-byte observer. [The acquisition report](LOCAL-REF-CAS-NATIVE.md)
+records independently checked mismatch/no-selected-ref-update and matching/A→B
+observations, their costs and remaining conformance limits. No earlier result is erased.
+The unchanged bounded/inductive model was not rerun.
+
+Both original contexts for this chat are now migration-detached, with original
+pause/stop ACKs and detach receipts preserved privately under separately confirmed
+human maintenance authorization. Pending task/review work and evidence remain. No
+automatic resume or replay follows. A later Host version is not the acquisition version.
+
+Caller-local source fixes now keep explicit original readonly capture available when
+candidate/review projection refuses, retain the original refusal/next, and recognize
+the observed SDK additional_tools record without exposing private/unknown kinds.
+Three original modules passed107 locally; real detached-task readback preserved the
+parent refusal while returning observed capture. The caller catalog still reconciles
+2281 methods and7 physical families; only three existing method protections have
+reviewed source updates. No new tests, mandatory CI jobs, Manager or selection gate.
+Private source patches, exact checked bytes, failures, costs and bundles are in the
+workspace's native-effect-continuation-20261026 output package. Source commits are
+local only; remote Draft PRs and their previous checks are not updated acceptance.
+
+Caller local commit: `82f3d2a840701dc31fbbdf38c3d2eb25014aefb2`.
+Its checked software bytes are linked to the original receipt; the subsequently
+appended handoff and local commit do not create remote exact-head acceptance.

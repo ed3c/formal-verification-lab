@@ -2,7 +2,7 @@
 
 This proposed trial observes a real, persistent Git ref operation in an isolated Lab fixture. It uses the existing Soodles `run_push` process-receipt helper and keeps the Lab evaluator read-only. The first trial has two independent cases. Neither case retries an operation.
 
-At design time, the observed resource start credit and effective limit are zero. Both cases are **NOT_RUN**. No runtime OIDs, receipts, no-effect finding, or conformance PASS are supplied by this document.
+At design time, the observed resource start credit and effective limit were zero. Both cases were **NOT_RUN** in that frozen design snapshot. The later [Native acquisition report](LOCAL-REF-CAS-NATIVE.md) records actual observations; this design supplies no runtime OIDs or conformance PASS.
 
 ## Source relationship
 
@@ -74,4 +74,4 @@ Stop the affected effect path for resource refusal, missing permission, source o
 
 Retain failures, partial inputs, UNKNOWN findings, and measured costs. Unavailable usage or money remains unknown. No result here switches the active version, merges a branch, or changes #448, #450, or escrow. A later admitted run is new evidence under its recorded source and boundary; it does not overwrite historical failures.
 
-The separate [abstract CAS model checks](LOCAL-REF-CAS-FORMAL.md) now have an eight-step bounded safety result, two planted counterexamples and three reachability witnesses. They do not change the NOT_RUN status of these real fixture cases or establish effect-retry conformance.
+The separate [abstract CAS model checks](LOCAL-REF-CAS-FORMAL.md) now have an eight-step bounded safety result, two planted counterexamples and three reachability witnesses. Those model results did not execute the real fixture cases or establish effect-retry conformance. Later actual acquisition is reported separately above; the frozen design and model evidence retain their original scope.

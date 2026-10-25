@@ -1,6 +1,6 @@
 # Abstract local ref CAS checks
 
-The new CAS specification has an eight-step **BOUNDED_PASS**, two planted counterexamples and three reachability witnesses. These are actual Quint/Apalache results for an abstract model. The real fixture cases in [the acquisition design](LOCAL-REF-CAS.md) remain NOT_RUN, and effect-retry conformance remains UNKNOWN.
+The new CAS specification has an eight-step **BOUNDED_PASS**, two planted counterexamples and three reachability witnesses. These are actual Quint/Apalache results for an abstract model. Those model runs did not execute the real fixture cases in [the acquisition design](LOCAL-REF-CAS.md). Later [Native acquisition](LOCAL-REF-CAS-NATIVE.md) supplied scoped CAS observations; effect-retry conformance remains UNKNOWN.
 
 The same unchanged model now also has [inductive invariant checks](LOCAL-REF-CAS-INDUCTION.md). Initialization, preservation and safety implication passed; stage-specific negative controls verify all three obligations. The bounded results below retain their original scope and evidence.
 
@@ -53,4 +53,4 @@ The verify query selections are below. Each command also needs `--backend=apalac
 | `specs/local_ref_cas_checks.qnt` | `LocalRefCASReachability` | `positiveUnreachable` | `step` | 8 |
 | `specs/local_ref_cas_checks.qnt` | `LocalRefCASReachability` | `unknownEffectUnreachable` | `step` | 8 |
 
-Native acquisition still requires its original admission. Do not execute Git or use another carrier to replace the deferred trace. After this source update, read back the old prepared request and its frozen sources before using it; a previous preparation does not establish freshness for a newer head.
+Native acquisition requires normal original admission. Do not execute Git or use another carrier to replace a deferred trace. Read the separate actual acquisition and maintenance handoff before continuing; its contexts are detached and must not be automatically resumed. A previous preparation does not establish freshness for a newer head.
