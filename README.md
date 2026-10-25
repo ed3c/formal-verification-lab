@@ -107,3 +107,9 @@ Keep private Owner records, Provider records, raw Native traces, credentials, an
 ## Source and license
 
 The public core uses the MIT license. Dependencies keep their own licenses. `LICENSE` applies only to this project's original code.
+
+## Test catalog and mapping
+
+Use [test classification](docs/TEST-CATALOG.md), [finite source-mapping quality](docs/SOURCE-MAPPING.md)
+and [repository interaction](docs/ROUTE-INTERACTION.md) through the existing read-only CLI.
+The [local handoff](docs/HANDOFF-TEST-CATALOG.md) separates these results from value, Native and runtime acceptance.
