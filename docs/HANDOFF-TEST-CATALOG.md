@@ -90,3 +90,40 @@ local only; remote Draft PRs and their previous checks are not updated acceptanc
 Caller local commit: `82f3d2a840701dc31fbbdf38c3d2eb25014aefb2`.
 Its checked software bytes are linked to the original receipt; the subsequently
 appended handoff and local commit do not create remote exact-head acceptance.
+
+
+## Exact caller observation scope — 2026-10-26
+
+Fresh caller source-derived preparation found an unmapped catalog-map input and
+returned needs_scope. The earlier107 focused diagnostic did not clear it. The
+Session reviewed the actual standalone exporter and original classification
+contract: these observations do not select or waive product tests. The caller
+now registers only that exact metadata path beside its existing observation
+ledger. It remains in the complete original request snapshot; exporter source,
+product sources and unknown JSON neighbors retain their separate controls/refusals.
+The selector/execution/readback algorithms are unchanged. No new gate or test ID.
+
+The extended original exact-path/unknown-neighbor method failed before the change.
+The normal owner-derived current-diff scope then passed17 locally. The accumulated
+readback plus scope correction was subsequently validated through the same original
+Test Manager: eight whole modules plus17 exact selector methods,298/298 passed,
+source current, 99.352785 unit-owner seconds. All2039 selected source
+files still matched before commit. This is local unit evidence for base5d244b9
+and its checked working-tree bytes, not full repository, physical/runtime/Native
+acceptance or remote exact-head CI. Original mixed-scope projection, not a global
+case-list shortcut, defines that population.
+
+Caller commit `aa87f279db0367a132e7cdbe059138e61a709694` is local and clean. The private output
+selection-scope-continuation-20261026 preserves commands, source bindings, pre-fix
+failure, small-step and accumulated receipts, costs and corrected audit diagnostics.
+The catalog still contains2281 methods plus7 physical families; unit2096 keep
+and185 with reviewed rewrites, four method review updates. These labels remain
+observations, not a new semantic or necessity verdict. The query dispatches no tests.
+This correction resolves a source-classification breakpoint; it does not prove a
+cost saving, resolve the historical999 candidates or establish whole CPVC gain.
+
+Lab changes in this continuation are this N-class handoff only. Checker/model/route
+instructions and their previous scoped evidence are unchanged; no repeated46-test
+or solver run. The two retained Native contexts remain detached and are not resumed.
+Private traces stay outside public history. No source push, remoteCI, active runtime
+switch, merge or #448/#450/escrow change occurred in this continuation.
