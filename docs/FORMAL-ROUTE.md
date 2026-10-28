@@ -58,6 +58,8 @@ The Lab is a read-only evaluator and universal method source, not a replacement 
 
 ## Honest verification and cost
 
+For project-local verification skill creation and upkeep, use the [pstack integration](PSTACK-FORMAL-INTEGRATION.md). It defines applicability review before selecting upstream create/maintain, independent evidence for Oracle changes, and the existing caller execution boundaries. The [P4 skill](../.agents/skills/verify-p4-contracts/SKILL.md) packages an existing check rather than creating another model.
+
 Prefer existing valid evidence. Run a new checker only when model/assumption/mapping changes invalidate the relevant result or a genuinely new question needs it. Preserve actual model/tool/source versions, command, bounds, exit, result, canary trace and observed costs. BOUNDED_PASS, induction under fixed assumptions, finite source checks, local test PASS and Native conformance are different claims. No Lab result authorizes writes, retry, merge or deletion.
 
 Independent oracle quality comes before adding more tests, including formal tests. A new formal check must justify the unique behavior or assumption it protects and its execution demand. Avoid accumulating duplicate controls, universal solver jobs or fresh full-suite runs to collect missing timing. See [decoupling](DECOUPLING.md), [acceptance](ACCEPTANCE.md) and [security](SECURITY.md).

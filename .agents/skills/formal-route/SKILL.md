@@ -9,6 +9,8 @@ description: 評估測試是否保護獨立產品契約，選擇必要的形式�
 
 先讀 [測試價值與方法](../../../docs/FORMAL-ROUTE.md)。原 Goal、Measurement、Effort 與有效續行沿用；只有新的可反駁前提才重新思考，不增加固定回合、測項數或決策數門檻。
 
+需要建立或維護專案驗證技能時，沿 [pstack 整合契約](../../../docs/PSTACK-FORMAL-INTEGRATION.md) 使用實際安裝的 `create-formal-verification-skill`／`maintain-formal-verification-skill`。先核對既有證據適用性；可重用時直接讀回，不因 upstream maintain 的首步而重跑。需要維護才選其程序，未執行不得稱已完成。修改 Oracle 必須有獨立契約支持，不能僅憑測試、註解或 commit 說明。既有 [P4 技能](../verify-p4-contracts/SKILL.md) 包裝原 runner，無需另建模型。
+
 分類或統計測項時引用 [測試分類契約](../../../docs/TEST-CATALOG.md)：方法、執行環境、受保護的行為模組、保留裁決與需求條件分開。CI 是環境，必要性依具體觸發判定；多標籤按原 ID 去重並分粒度計數。用唯讀 `catalog` 查詢 caller 自有資料，不由標籤新增選測、跳過或 gate；欄位齊全不證明價值，未知必要數不能填零。
 
 完整跨 Repo 資料流與工具責任引用 [交互契約](../../../docs/ROUTE-INTERACTION.md)，來源定位品質引用 [映射量測契約](../../../docs/SOURCE-MAPPING.md)。本入口保留方法與工程判斷；機械欄位、拒絕、讀回與度量交原程式。文件不因移動而變成可執行流程，>99% 只適用實際量測的固定母體，不延伸為語義或價值保證。
