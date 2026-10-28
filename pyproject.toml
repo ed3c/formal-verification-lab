@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "formal-verification-lab"
+version = "0.1.0"
+description = "Read-only formal verification evaluator for agent harness safety contracts"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Formal Verification Lab contributors"}]
+dependencies = []
+
+[project.optional-dependencies]
+verify = ["icontract>=2.7,<3", "crosshair-tool>=0.0.100,<1", "hypothesis>=6,<7"]
+test = ["pytest>=8,<10", "hypothesis>=6,<7", "icontract>=2.7,<3"]
+
+[project.scripts]
+fvl = "formal_verification_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

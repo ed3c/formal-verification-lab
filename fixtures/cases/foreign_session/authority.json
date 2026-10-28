@@ -1,0 +1,14 @@
+{
+  "allowed_kinds": [
+    "PUBLISH",
+    "RESUME",
+    "ADVANCE",
+    "RETRY",
+    "TERMINAL"
+  ],
+  "authorized": true,
+  "epoch": 5,
+  "operation_id": "op-1",
+  "seq": 1,
+  "session_id": "foreign"
+}

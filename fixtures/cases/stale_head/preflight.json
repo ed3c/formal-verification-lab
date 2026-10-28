@@ -1,0 +1,6 @@
+{
+  "authority_epoch": 5,
+  "head": "old-head",
+  "observed_seq": 9,
+  "operation_id": "op-1"
+}

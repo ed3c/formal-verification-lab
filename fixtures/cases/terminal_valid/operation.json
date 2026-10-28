@@ -1,0 +1,12 @@
+{
+  "action_seq": 10,
+  "from_state": "RECONCILED",
+  "head": "head-a",
+  "idempotency_key": "op-1",
+  "kind": "TERMINAL",
+  "operation_id": "op-1",
+  "reports_success": true,
+  "requests_effect": false,
+  "session_id": "session-1",
+  "to_state": "TERMINAL"
+}

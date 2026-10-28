@@ -1,0 +1,12 @@
+{
+  "action_seq": 10,
+  "from_state": "PREPARED",
+  "head": "head-a",
+  "idempotency_key": "op-1",
+  "kind": "ADVANCE",
+  "operation_id": "op-1",
+  "reports_success": false,
+  "requests_effect": false,
+  "session_id": "session-1",
+  "to_state": "CLAIMED"
+}

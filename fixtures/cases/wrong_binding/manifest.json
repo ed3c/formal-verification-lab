@@ -1,0 +1,26 @@
+{
+  "files": {
+    "authority": {
+      "path": "authority.json",
+      "sha256": "508d7c85a131a4eb210a3a0f68259c4c8726948161b85f5b41d2ee2e59dfcf09"
+    },
+    "evidence": {
+      "path": "evidence.json",
+      "sha256": "ede3ec99ef1bedc5fa6dde9a9c7d31ff5b695460dd060cd65c51df842797bc5c"
+    },
+    "operation": {
+      "path": "operation.json",
+      "sha256": "08439342a45a5b9b72f64b5595864d7472712ac76021e3cd492abfb66bf012ab"
+    },
+    "preflight": {
+      "path": "preflight.json",
+      "sha256": "1cf7d62d308d968270156c499b8dbffebab7ee8f3bb80f322daede1e73bce2ac"
+    },
+    "provider": {
+      "path": "provider.json",
+      "sha256": "995020d6e5bc4e73121746dc8a7aa6792b956b44327feede200b7bcc314dcadf"
+    }
+  },
+  "provenance": "synthetic",
+  "schema": "fvl.bundle.v1"
+}

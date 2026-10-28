@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "effect_confirmed": false,
+  "effect_count": 0,
+  "idempotency_key": "op-1",
+  "observed_seq": 11,
+  "operation_id": "op-1",
+  "reconciled": true,
+  "terminal_receipt": true
+}

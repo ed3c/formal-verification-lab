@@ -1,0 +1,786 @@
+{
+  "schema": "fvl.abstract-cas-evidence.v1",
+  "scope": "Abstract symbolic model checker output, not Native/Git observations or full Soodles refinement",
+  "models": [
+    {
+      "path": "specs/local_ref_cas.qnt",
+      "sha256": "3fb5240f1a07f1e4c35bf4a6673a5238b969029ec2c6f0577684186cfc1bec80"
+    },
+    {
+      "path": "specs/local_ref_cas_checks.qnt",
+      "sha256": "ed2570ea37e5db9f277af42449ff20a9eade95d3d1d22f24f4aa6bf20988fd50"
+    }
+  ],
+  "toolchain": {
+    "quint": "0.32.0",
+    "apalache": "0.56.1",
+    "build": "70cdaf4"
+  },
+  "safety_bound": 8,
+  "inductive_proof": "NOT_RUN",
+  "native_CAS_trace": "NOT_RUN",
+  "effect_retry_conformance": "UNKNOWN",
+  "queries": [
+    {
+      "name": "safety",
+      "invariant_bound": 8,
+      "exit_code": 0,
+      "structured_status": "ok",
+      "claim": "BOUNDED_PASS abstract model only"
+    },
+    {
+      "name": "guard-canary",
+      "invariant_bound": 2,
+      "exit_code": 1,
+      "structured_status": "violation",
+      "claim": "planted COUNTEREXAMPLE",
+      "transitions": 2,
+      "abstract_states": [
+        {
+          "attemptCount": {
+            "#bigint": "0"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "2"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "NONE",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "2"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "1"
+          },
+          "expected": {
+            "#bigint": "2"
+          },
+          "gitDone": true,
+          "gitOutcome": "UPDATED",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "1"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "false-reconciliation-canary",
+      "invariant_bound": 4,
+      "exit_code": 1,
+      "structured_status": "violation",
+      "claim": "planted COUNTEREXAMPLE",
+      "transitions": 4,
+      "abstract_states": [
+        {
+          "attemptCount": {
+            "#bigint": "0"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "NONE",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "1"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": true,
+          "gitOutcome": "UPDATED",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "1"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "1"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": true,
+          "gitOutcome": "UPDATED",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "UNKNOWN",
+          "ref": {
+            "#bigint": "1"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "1"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": true,
+          "gitOutcome": "UPDATED",
+          "noEffectReconciled": true,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "1"
+          },
+          "readbackSeen": true,
+          "receipt": "UNKNOWN",
+          "ref": {
+            "#bigint": "1"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "rejection",
+      "invariant_bound": 8,
+      "exit_code": 1,
+      "structured_status": "violation",
+      "claim": "REACHABILITY_WITNESS",
+      "transitions": 4,
+      "abstract_states": [
+        {
+          "attemptCount": {
+            "#bigint": "0"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "2"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "NONE",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "2"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "2"
+          },
+          "gitDone": true,
+          "gitOutcome": "MISMATCH",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "2"
+          },
+          "gitDone": true,
+          "gitOutcome": "MISMATCH",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "COMPLETED_REJECTED",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "2"
+          },
+          "gitDone": true,
+          "gitOutcome": "MISMATCH",
+          "noEffectReconciled": true,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "0"
+          },
+          "readbackSeen": true,
+          "receipt": "COMPLETED_REJECTED",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "positive",
+      "invariant_bound": 8,
+      "exit_code": 1,
+      "structured_status": "violation",
+      "claim": "REACHABILITY_WITNESS",
+      "transitions": 4,
+      "abstract_states": [
+        {
+          "attemptCount": {
+            "#bigint": "0"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "NONE",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "1"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": true,
+          "gitOutcome": "UPDATED",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "1"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "1"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": true,
+          "gitOutcome": "UPDATED",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "COMPLETED_OK",
+          "ref": {
+            "#bigint": "1"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": true,
+          "effectCount": {
+            "#bigint": "1"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": true,
+          "gitOutcome": "UPDATED",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "1"
+          },
+          "readbackSeen": true,
+          "receipt": "COMPLETED_OK",
+          "ref": {
+            "#bigint": "1"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "unknown-effect",
+      "invariant_bound": 8,
+      "exit_code": 1,
+      "structured_status": "violation",
+      "claim": "REACHABILITY_WITNESS",
+      "transitions": 3,
+      "abstract_states": [
+        {
+          "attemptCount": {
+            "#bigint": "0"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "NONE",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "0"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": false,
+          "gitOutcome": "NONE",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "0"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "1"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": true,
+          "gitOutcome": "UPDATED",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "STARTED",
+          "ref": {
+            "#bigint": "1"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        },
+        {
+          "attemptCount": {
+            "#bigint": "1"
+          },
+          "before": {
+            "#bigint": "0"
+          },
+          "confirmed": false,
+          "effectCount": {
+            "#bigint": "1"
+          },
+          "expected": {
+            "#bigint": "0"
+          },
+          "gitDone": true,
+          "gitOutcome": "UPDATED",
+          "noEffectReconciled": false,
+          "otherRef": {
+            "#bigint": "2"
+          },
+          "readbackRef": {
+            "#bigint": "-1"
+          },
+          "readbackSeen": false,
+          "receipt": "UNKNOWN",
+          "ref": {
+            "#bigint": "1"
+          },
+          "target": {
+            "#bigint": "1"
+          }
+        }
+      ]
+    }
+  ]
+}
