@@ -16,7 +16,7 @@ import p4_readback
 def selected(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     """Synthetic receipts exercise readback; they are not solver evidence."""
     source, evidence = tmp_path / "source", tmp_path / "evidence"
-    for relative in set(p4_readback.ORACLE_FILES) | {
+    for relative in set(p4_readback.ORACLE_DIGESTS) | {
         str(path.relative_to(p4.ROOT)) for path in p4.INPUTS
     }:
         target = source / relative
@@ -59,23 +59,19 @@ def selected(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     return source, evidence
 
 
-def test_reuse_is_read_only_and_starts_no_checker(selected, monkeypatch):
+def test_reuse_without_git_history_is_read_only_and_starts_no_checker(selected, monkeypatch):
     source, evidence = selected
     before = {p: p.read_bytes() for p in evidence.rglob("*") if p.is_file()}
-    original_run = p4_readback.subprocess.run
-    calls = []
+    monkeypatch.setattr(p4_readback, "ROOT", source)
 
-    def read_only_git(command, **kwargs):
-        assert command[:2] == ["git", "show"]
-        calls.append(command)
-        return original_run(command, **kwargs)
+    def forbidden_process(*args, **kwargs):
+        pytest.fail("readback must not need Git history or start a checker")
 
-    monkeypatch.setattr(p4_readback.subprocess, "run", read_only_git)
+    monkeypatch.setattr(p4.subprocess, "Popen", forbidden_process)
     result = p4_readback.inspect(evidence, source)
     assert result["status"] == "REUSE"
     assert result["fresh_execution"] is False
     assert result["authorizes_acceptance"] is False
-    assert calls
     assert before == {p: p.read_bytes() for p in evidence.rglob("*") if p.is_file()}
 
 

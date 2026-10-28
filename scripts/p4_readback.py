@@ -6,19 +6,19 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
-import subprocess
 import sys
 
 
 ROOT = Path(__file__).resolve().parent.parent
 SYNC_COMMIT = "72646cf797fa2a4f82f7b88f57dd7c5d0b309119"
-ORACLE_FILES = (
-    "docs/ACCEPTANCE.md",
-    "src/formal_verification_lab/formal_contracts.py",
-    "tests/test_properties.py",
-    "scripts/p4.py",
-    "scripts/p4_canary.py",
-)
+# Bind the reviewed bytes without requiring history in shallow checkouts.
+ORACLE_DIGESTS = {
+    "docs/ACCEPTANCE.md": "44cfcce0faa22cfea5656357f3fb1e607a7a3b9710dddc4a6800a7cc589751eb",
+    "src/formal_verification_lab/formal_contracts.py": "cc2f7c63e52a01451cf01fbdf4f69be78e9c25864ccc4047f0a2d317ac07fcb7",
+    "tests/test_properties.py": "0a90c90a2ad984c3ac1f4f72b77ced480d6fcb5537137e67b211bef195906bfc",
+    "scripts/p4.py": "c2cdd3fd08aad9d4f2f37bf8f6aa8d08d204862ba5ec92321df02bceb4e81ae0",
+    "scripts/p4_canary.py": "4bb73921114e9cec7bde4a6a4adbe916e4dd6925587a3ba36a2f4c2af014ab93",
+}
 RUNS = ("crosshair", "canary", "hypothesis", "controls")
 
 
@@ -40,17 +40,9 @@ def read_json(path: Path) -> dict:
     return value
 
 
-def reviewed_digest(relative: str) -> str:
-    result = subprocess.run(
-        ["git", "show", f"{SYNC_COMMIT}:{relative}"], cwd=ROOT,
-        capture_output=True, check=True, timeout=10,
-    )
-    return hashlib.sha256(result.stdout).hexdigest()
-
-
 def original_runner():
     path = ROOT / "scripts/p4.py"
-    if digest(path) != reviewed_digest("scripts/p4.py"):
+    if digest(path) != ORACLE_DIGESTS["scripts/p4.py"]:
         raise ReadbackError("the readback's original P4 validator needs source review")
     spec = importlib.util.spec_from_file_location("p4_original", path)
     module = importlib.util.module_from_spec(spec)
@@ -73,7 +65,7 @@ def inspect(evidence: Path, source: Path) -> dict:
             "selected evidence custody and independent contract meaning need Session review",
         ],
     }
-    changed_oracles = [p for p in ORACLE_FILES if digest(source / p) != reviewed_digest(p)]
+    changed_oracles = [p for p, expected in ORACLE_DIGESTS.items() if digest(source / p) != expected]
     if changed_oracles:
         return {**result, "status": "ORACLE_REVIEW_REQUIRED", "changed_oracles": changed_oracles}
 
@@ -123,8 +115,7 @@ def main() -> int:
     args = parser.parse_args()
     try:
         result = inspect(args.evidence, args.source)
-    except (OSError, ValueError, KeyError, TypeError, RuntimeError,
-            subprocess.SubprocessError) as exc:
+    except (OSError, ValueError, KeyError, TypeError, RuntimeError) as exc:
         result = {"status": "EVIDENCE_REVIEW_REQUIRED", "error": str(exc),
                   "fresh_execution": False, "solver_runs": 0, "authorizes_acceptance": False}
     print(json.dumps(result, indent=2, sort_keys=True))
